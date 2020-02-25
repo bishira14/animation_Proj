@@ -4,8 +4,7 @@ let theMove = document.querySelector('#myMove')
   theMove.addEventListener('click',function(){
     var elem = document.getElementById("animate");
     var pos = 0;
-    var id = setInterval(frame, 5);
-    function frame() {
+    var id = setInterval(function () {
       if (pos == 350) {
         clearInterval(id);
       } else {
@@ -13,5 +12,6 @@ let theMove = document.querySelector('#myMove')
         elem.style.top = pos + "px";
         elem.style.left = pos + "px";
       }
-    }
+    }, 5);
+
   });
